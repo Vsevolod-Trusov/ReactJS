@@ -1,0 +1,8 @@
+.resultTable{
+    border-collapse: collapse;
+    margin: auto;
+    background: burlywood;
+    min-height: 300px;
+    min-width: 500px;
+    text-align: center;
+}
