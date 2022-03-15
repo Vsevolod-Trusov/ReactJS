@@ -1,0 +1,60 @@
+form{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    background-color: #dad3d3;
+    border-radius: 30px;
+}
+.formTitle{
+    text-align:center;
+    font-size: 35px;
+    font-family: "Sylfaen";
+}
+
+.TableTitle{
+    text-align: center;
+    font-size: 35px;
+    font-family: "Sylfaen";
+
+}
+
+.nameInputStyle{
+    margin-left: 90px;
+}
+.ageInputStyle{
+    margin-left: 128px;
+}
+.dateInputStyle{
+    margin-left: 106px;
+}
+.facultyInputStyle{
+    margin-left: 150px;
+}
+.groupInputStyle{
+    margin-left: 155px;
+}
+.specInputStyle{
+    margin-left: 132px;
+}
+.eMailInputStyle{
+    margin-left: 160px;
+}
+.telInputStyle{
+    margin-left: 155px;
+}
+label input {
+    margin-top:20px;
+}
+ label{
+     display: block;
+ }
+
+.sendButton{
+    margin-top:20px;
+    width: 80px;
+    height: 30px;
+    margin-left: 150px;
+    border-color:#06c406;
+    border-radius: 10px;
+    background: #06c406;
+}
