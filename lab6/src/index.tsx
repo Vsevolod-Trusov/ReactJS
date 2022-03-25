@@ -7,7 +7,6 @@ import StudentInfo from './components/StudentInfo'
 ReactDOM.render(
     <>
         <StudentInfo/>
-
     </>
   ,
   document.getElementById('root')

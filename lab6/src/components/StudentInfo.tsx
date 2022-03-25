@@ -1,5 +1,8 @@
 import React, {ChangeEvent, useRef, useState} from 'react';
 import StudentInfoHandler from './StudentInfoHandler';
+import Notes from './Notes';
+import * as functions from './functions'
+
 import "../styles/Inputs.css"
 
 
@@ -16,73 +19,17 @@ const StudentInfo=()=> {
     const [phone, setPhone] = useState<string>()
     const [values, setValues] = useState<any[]>([])
 
-    const getPhoneOperator=(tel:string | undefined)=>{
-        let spltTel = tel?.split(' ')
-        if(spltTel) {
-            let Operator
-            if ( spltTel[1]== "44" ||spltTel[1] == "29" )
-                Operator = "A1("+spltTel[1]+")"
-            else  if ( spltTel[1]== "33")
-                Operator = "MTC("+spltTel[1]+")"
-            else if ( spltTel[1]== "25")
-                Operator = "Life("+spltTel[1]+")"
-            else if ( spltTel[1]== "17")
-                Operator = "Beltelecom("+spltTel[1]+")"
-            else
-                Operator = spltTel[1]
-            return Operator
-        }else
-            return "unknown"
-    }
-    const getEMailOperator=(mail:string | undefined)=>{
-        let spltMail = mail?.split('@')
-        if(spltMail) {
-                return spltMail[1]
-        }
-        else
-            return "unknown"
-    }
-    const getCourse = (numbers: string[] | undefined) => {
-        let curCourse
-        let now = new Date()
-        let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-        if (numbers) {
-            let dob = new Date(Number(numbers[2]), Number(numbers[1]), Number(numbers[0]));
-            curCourse = today.getFullYear() - dob.getFullYear()
-            if (curCourse == 0)
-                ++curCourse
-            else if (curCourse > 4)
-                curCourse = -1
 
-            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-            curCourse == -1 ? "Finished" : curCourse
-            return curCourse
-        }
-    }
-        const getAge = (numbers: string[] | undefined) => {
-            let curAge
-            let now = new Date()
-            let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-            if (numbers) {
-                let dob = new Date(Number(numbers[2]), Number(numbers[1]), Number(numbers[0]));
-                curAge = today.getFullYear() - dob.getFullYear()
-                if (today.getMonth() + 1 < dob.getMonth())
-                    curAge -= 1
-                else if (today.getDay() < dob.getDay())
-                    curAge -= 1
-            }
-            return curAge
-        }
         const handleSubmit = (event: any) => {
             let numbers: string[] | undefined = birthDate?.split('.')
             let numbs: string[] | undefined = enterDate?.split('.')
-            let curAge = getAge(numbers);
-            let course = getCourse(numbs)
+            let curAge = functions.getAge(numbers);
+            let course = functions.getCourse(numbs)
             let FacultyGroupCourse = faculty+", "+ group+", "+course
             let mail = eMail
-            let mailOperator = getEMailOperator(eMail)
+            let mailOperator = functions.getEMailOperator(eMail)
             let tel = phone
-            let telOperator = getPhoneOperator(phone)
+            let telOperator = functions.getPhoneOperator(phone)
             if (values === []) {
                 setValues([])
             } else {
@@ -101,6 +48,10 @@ const StudentInfo=()=> {
 
         let divStyle = {
             display: 'flex',
+            justifyContent: 'center'
+        }
+        let NotesStyle = {
+        display:'flex',
             justifyContent: 'center'
         }
         return (
@@ -209,6 +160,7 @@ const StudentInfo=()=> {
                 </div>
                 <h1 className='TableTitle'>{title}</h1>
                 <StudentInfoHandler values={values}/>
+                <Notes />
             </>
         )
     }

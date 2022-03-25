@@ -2,23 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="182ea8a7-9106-4648-bce9-a09e84a69acb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab5/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/components/BirthDate.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/components/PhoneInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/components/SignUpEmailInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/components/SignUpForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/components/SignUpPasswordInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/styles/BirthDate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/styles/ProgressBarStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/src/styles/SignUpFormStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/StudentInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Inputs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/TableStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Notes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ToDoList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/functions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Notes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/toDoList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/components/Calendar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/components/Notes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/components/ToDoList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/components/functions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/interfaces/interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/styles/CalendarStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/styles/Notes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/styles/toDoList.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3/src/Phone.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Phone.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3/src/SortedTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/SortedTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StudentInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StudentInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,14 @@
       <option name="presentableId" value="Default" />
       <updated>1647080186234</updated>
       <workItem from="1647080188922" duration="1613000" />
-      <workItem from="1647266616703" duration="23617000" />
+      <workItem from="1647266616703" duration="23959000" />
+      <workItem from="1647348999346" duration="1626000" />
+      <workItem from="1647514449093" duration="9307000" />
+      <workItem from="1647598982591" duration="946000" />
+      <workItem from="1647607545609" duration="241000" />
+      <workItem from="1647611248216" duration="9000" />
+      <workItem from="1647617797872" duration="8652000" />
+      <workItem from="1647690447960" duration="1072000" />
     </task>
     <servers />
   </component>

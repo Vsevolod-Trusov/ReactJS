@@ -1,0 +1,20 @@
+
+label input{
+    text-align: center;
+}
+.FirstDiv{
+    padding: 20px 50px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.AddButton{
+    display: block;
+    height: 25px;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.ListContainer{
+    padding:3% 10% 0 10%;
+}

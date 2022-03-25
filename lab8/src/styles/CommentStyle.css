@@ -1,0 +1,40 @@
+div img{
+    height: 70px;
+    width: 70px;
+    border: 3px dashed black;
+    padding: 5px;
+}
+
+.CommentBox{
+    margin-top: 20px;
+    padding:2% 10% 2% 10%;
+    background: #efe4e4;
+    border-radius: 50px;
+}
+
+.ContentContainer div{
+    display: inline-block;
+}
+
+.ContentContainer div span{
+    padding-left: 25px;
+    font-size: 45px;
+    font-family: "Sylfaen";
+}
+.ButtonsContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.ButtonsContainer button{
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.Text{
+    padding-left: 30%;
+    font-size: 20px;
+    font-family: "Sylfaen";
+}
+
