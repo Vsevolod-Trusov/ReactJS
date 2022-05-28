@@ -1,111 +1,22 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../styles/Container.css';
 import classnames from 'classnames';
-import Modal from "../components/Modal";
 import {ICatalogItem} from '../interfaces/interface';
 
-const CatalogItems: React.FC = () => {
-
-    let items: ICatalogItem[] = [
-        {name: 'Aist Turbo', price: 'Price', count: 1, isNew: true, discount: 0, imagePath: 'images/Aist Turbo.PNG'},
-        {
-            name: 'Cube Acid 19\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: true,
-            discount: 0,
-            imagePath: 'images/Cube Acid 19\'\'.PNG'
-        },
-        {
-            name: 'Krakken Molly',
-            price: 'Price',
-            count: 1,
-            isNew: true,
-            discount: 10,
-            imagePath: 'images/Krakken Molly.PNG'
-        },
-        {
-            name: 'Racer Bruno 16\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: false,
-            discount: 66,
-            imagePath: 'images/Racer Bruno 16\'\'.PNG'
-        },
-        {
-            name: 'Racer Sofia',
-            price: 'Price',
-            count: 1,
-            isNew: false,
-            discount: 0,
-            imagePath: 'images/Racer Sofia.PNG'
-        },
-        {
-            name: 'Racer Tempo 18\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: false,
-            discount: 79,
-            imagePath: 'images/Racer Tempo 18\'\'.PNG'
-        },
-        {
-            name: 'Racer Turbo',
-            price: 'Price',
-            count: 1,
-            isNew: false,
-            discount: 0,
-            imagePath: 'images/Racer Turbo.PNG'
-        },
-        {
-            name: 'Spicialized Sirrus 17\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: false,
-            discount: 58,
-            imagePath: 'images/Spicialized Sirrus 17\'\'.PNG'
-        },
-        {
-            name: 'Stels Miss 18\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: true,
-            discount: 0,
-            imagePath: 'images/Stels Miss 18\'\'.PNG'
-        },
-        {
-            name: 'Stels Navigator 18\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: false,
-            discount: 0,
-            imagePath: 'images/Stels Navigator 18\'\'.PNG'
-        },
-        {
-            name: 'Treck FX 22\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: true,
-            discount: 15,
-            imagePath: 'images/Treck FX 22\'\'.PNG'
-        },
-        {
-            name: 'Treck Verve 19\'\'',
-            price: 'Price',
-            count: 1,
-            isNew: true,
-            discount: 99,
-            imagePath: 'images/Treck Verve 19\'\'.PNG'
-        }
-    ];
+interface IProps {
+    catalogItems: ICatalogItem[] ;
+}
+const CatalogItems: React.FC<IProps> = (props:IProps) => {
 
     return (
         <>
             <div className="Maincontainer">
                 <div className="container">
                     {
-                        items.map((item: ICatalogItem, id: number) => {
+                        props.catalogItems.map((item: ICatalogItem, id: number) => {
                             return (
-                                <><div key={id} className="itemContainer">
+                                <div  className="itemContainer"
+                                >
                                     <div className='discountContainer'>
                                         <div
                                             className={classnames({
@@ -123,9 +34,26 @@ const CatalogItems: React.FC = () => {
                                     <div className='imgContainer'><img src={item.imagePath} className="itemImg"/></div>
                                     <h2 className="itemTitle">{item.name}</h2>
 
+                                    <div className="active">
+                                        <div className='Prices'>
+                                            <div className={classnames({
+                                                'cross': item.discount > 0,
+                                                'notCross': item.discount == 0
+                                            })}>{item.price}$</div>
+
+                                            <div className={classnames({
+                                                'newPrice': item.discount > 0,
+                                                'oldPrice': item.discount ==0,
+                                            })}>{Math.round((item.price*(1-item.discount/100)))}$</div>
+
+                                        </div>
+                                        <div >Count:{item.count}</div>
+                                        <div className='className'>Good Item</div>
+                                    </div>
                                 </div>
-                                    <Modal />
-                                </>  );
+
+
+                        )
                         })
                     }
                 </div>

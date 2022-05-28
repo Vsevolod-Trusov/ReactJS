@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import SignUpEmailInput from "../components/SignUpEmailInput"
 import SignUpPasswordInput from './SignUpPasswordInput'
 import BirthDate from './BirthDate'
-import PhoneInput from './PhoneInput'
 import "../styles/SignUpFormStyle.css"
 
 
@@ -75,12 +74,7 @@ const SignUpForm: React.FunctionComponent<IForm> =(item:IForm)=>{
                     <BirthDate id="Date"/>
                 </label>
             </div>
-            <div className="PhoneDateDiv">
-                <label htmlFor="Phone" style={labelStyle}>
-                    Enter your Phone Number:
-                    <PhoneInput id="Phone"/>
-                </label>
-            </div>
+
             <button disabled={disable} >Send</button>
             <div>
                 {email}

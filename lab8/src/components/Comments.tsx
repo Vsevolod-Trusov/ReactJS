@@ -1,13 +1,12 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
 import '../styles/Comments.css'
 import ListComments from '../components/Comment'
-export interface IComment{
-    login:string,
+export interface IComment {
+    login: string,
     secretWord: string,
     email: string,
-    text:string
+    text: string
 }
-
 const Comments: React.FC = () => {
     const [Nlogin, setLogin] = useState<string>("")
     const [secretWord, setSecretWord] = useState<string>("")
@@ -74,7 +73,9 @@ const Comments: React.FC = () => {
 
     }, [MyEnable, Nlogin, eMail, comment])
 
-
+    var fruitStateVariable = useState('банан'); // возвращает пару
+    var fruit = fruitStateVariable[0]; // первый элемент в паре
+    var setFruit = fruitStateVariable[1]; // второй элемент в паре
 
         return (
             <>
@@ -148,3 +149,4 @@ const Comments: React.FC = () => {
     };
 
 export default Comments
+

@@ -1,0 +1,144 @@
+*{
+    font-size: 16px;
+    font-family: "Sylfaen";
+}
+
+.Maincontainer{
+    padding-left: 100px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.itemContainer{
+position: relative;
+    padding: 0px 20px 10px 20px;
+}
+.parent{
+    position: relative;
+}
+.itemTitle{
+    text-align: center;
+}
+.itemImg{
+    width: 200px;
+    height: 140px;
+}
+.imgContainer{
+}
+.redDiscount{
+    background: red;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.yelDiscount{
+    background: #ffcf01;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.greenDiscount{
+    height: 30px;
+    width: 30px;
+    background: #6cd708;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.new img{
+    position: absolute;
+    margin-top: 60px;
+    height: 60px;
+    width: 60px;
+
+}
+.default{
+    height: 30px;
+    width: 30px;
+    visibility: hidden;
+    padding: 10px;
+}
+
+.discountContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.itemContainer:hover .active{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        border-radius: 15px;
+        height: 100px;
+        width: 120px;
+        display: block;
+        transition: 0.4s all;
+        z-index: 100;
+        background: #ebe7e6;
+        opacity: 1;
+    }
+
+.active{
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border-radius: 15px;
+    height: 100px;
+    width: 120px;
+    display: block;
+    transition: 0.4s all;
+    z-index: 100;
+    background: #ebe7e6;
+}
+.active:hover {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border-radius: 15px;
+    height: 100px;
+    width: 120px;
+    display: block;
+    transition: 0.4s all;
+    z-index: 100;
+    background: #ebe7e6;
+    opacity: 1;
+}
+.Prices{
+    display: flex;
+
+}
+.Prices:first-child{
+    padding: 5px 0 0 5px;
+}
+.Prices > div{
+    padding-right: 5px;
+}
+.notActive{
+    opacity: 0;
+}
+.newPrice{
+    opacity: 1;
+    color: #05ce05;
+}
+.notCross{
+    font-weight: bold;
+}
+.oldPrice{
+    opacity: 0;
+}
+.priceDiv{
+    text-align: center;
+    font-family: "Sylfaen";
+}
+.cross{
+    text-decoration: line-through;
+    font-weight: bold;
+}

@@ -1,0 +1,18 @@
+.SearchPanel{
+    padding: 10px;
+    background: lightgray;
+    border-radius: 100px;
+    z-index: 200;
+}
+.Inputs{
+    text-align: center;
+}
+.Inputs input{
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.Inputs button{
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
