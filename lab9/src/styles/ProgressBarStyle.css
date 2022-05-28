@@ -1,0 +1,19 @@
+label input{
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.ProgressBackground {
+    background-color: #e8e2e2;
+    width: 175px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cecccc;
+}
+
+.ProgressBar {
+    background-color: #0cbd0c;
+    height: 100%;
+    width: 0;
+}
