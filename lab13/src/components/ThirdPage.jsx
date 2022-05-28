@@ -72,7 +72,7 @@ export class ThirdPage extends React.Component {
         <Link to="/secondPage">
           <button>prev page</button>
         </Link>
-        <button>confirm</button>
+
       </>
     );
   }

@@ -14,89 +14,45 @@ class Catalog extends Component {
   }
   array = [
     {
-      id: "Milk",
-      name: "Milk",
-      price: 0.8,
+      name: "Aist Turbo",
+      price: 120,
       inStock: 4,
-      img: "/imgs/milk.jpg",
-      desc: "Малако",
+      img: "/imgs/Aist Turbo.png",
       new: true,
       discount: 20,
-      weight: 1,
+      weight: 15,
       added: 0
     },
     {
-      id: "Butter",
-      name: "Butter",
-      price: 1.3,
+      name: "Cube Acid",
+      price: 130,
       inStock: 13,
-      img: "/imgs/butter.jpg",
-      desc: "Масла",
+      img: "/imgs/Cube Acid 19''.png",
       new: true,
       discount: 10,
-      weight: 5,
+      weight: 15,
       added: 0
     },
     {
-      id: "Coffee",
-      name: "Coffee",
-      price: 12,
+      name: "Krakken Molly",
+      price: 120,
       inStock: 23,
-      img: "/imgs/coffee.jpg",
-      desc: "Кава",
+      img: "/imgs/Krakken Molly.png",
       new: false,
       discount: 40,
-      weight: 3,
+      weight: 7,
       added: 0
     },
     {
-      id: "Tea",
-      name: "Tea",
-      price: 13,
+      name: "Racer Bruno",
+      price: 130,
       inStock: 2,
-      img: "/imgs/tea.jpg",
-      desc: "Гарбата",
+      img: "/imgs/Racer Bruno 16''.png",
       new: false,
       discount: 15,
-      weight: 10,
+      weight: 16,
       added: 0
-    },
-    {
-      id: "Sugar",
-      name: "Sugar",
-      price: 1.2,
-      inStock: 0,
-      img: "/imgs/sugar.jpg",
-      desc: "Цукар",
-      new: false,
-      discount: 30,
-      weight: 50,
-      added: 0
-    },
-    {
-      id: "Apples",
-      name: "Apples",
-      price: 1,
-      inStock: 16,
-      img: "/imgs/apples.jpg",
-      desc: "Яблыкi",
-      new: false,
-      discount: 25,
-      weight: 20,
-      added: 0
-    },
-    {
-      id: "Cheese",
-      name: "Cheese",
-      price: 10,
-      inStock: 9,
-      img: "/imgs/cheese.jpg",
-      desc: "Сыр",
-      new: false,
-      discount: 5,
-      weight: 5,
-      added: 0
-    },
+    }
   ];
   sort(byWhat) {
     let direction = this.sorted[byWhat] ? 1 : -1,
@@ -124,14 +80,22 @@ class Catalog extends Component {
     );
   }
   onClickHandler(item, e) {
-    this.props.addToCart(item);
-    e.target.disabled = true;
-    this.setState({isModalOpen: true});
+
+   //
+    let newItem = item;
+    if(newItem.inStock!==0)
+    { this.props.addToCart(item);
+      newItem.inStock--;
+      this.setState({isModalOpen: true});
+    }
+    else{
+      e.target.disabled = true;
+    }
   }
   goods() {
-    return this.state.array.map((item) => {
+    return this.state.array.map((item, id) => {
       return (
-        <div className="one_good" key={item.id}>
+        <div className="one_good" key={id}>
           <img src={item.img} alt="" />
           <div className="text">
             <div className="discount">
@@ -152,7 +116,6 @@ class Catalog extends Component {
               <h3>{item.price}$</h3>
             </div>
             <h4>Available: {item.inStock} items</h4>
-            <div>{item.desc}</div>
           </div>
         </div>
       );
@@ -174,7 +137,7 @@ class Catalog extends Component {
           <Modal toCatalog={this.closeModal} toOrder={this.toOrder}/>,
           document.getElementById("portal")
         )}
-        
+
       </>
       : <OrderForm />
     );

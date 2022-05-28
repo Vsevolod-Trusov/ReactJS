@@ -1,17 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Sylfaen";
 }
-.main{
-  display: flex;
-  justify-content: space-between;
-}
-
 .one_good {
-display: flex;
-margin: 30px 100px;
-padding: 0;
+  display: flex;
+  margin: 30px 100px;
+  padding: 0;
 }
 .one_good img {
   height: 200px;
@@ -26,8 +20,7 @@ padding: 0;
   display: inline-block;
 }
 .sorts button {
-  background-color: #1591ea;
-  border-radius: 35px;
+  background-color: #1275f1;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -49,62 +42,11 @@ padding: 0;
   background-color: rgb(245, 58, 58);
   text-align: center;
 }
-.redDiscount{
-  display: inline-block;
-  background: red;
-  height: 30px;
-  width: 30px;
-  padding: 10px;
-  border-radius: 50px;
-  font-size: 20px;
-}
-.yelDiscount{
-  display: inline-block;
-  background: #ffcf01;
-  height: 30px;
-  width: 30px;
-  padding: 10px;
-  border-radius: 50px;
-  font-size: 20px;
-}
-.greenDiscount{
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  background: #6cd708;
-  padding: 10px;
-  border-radius: 50px;
-  font-size: 20px;
-}
-
-.new img{
-  position: absolute;
-  margin-top: 60px;
-  height: 60px;
-  width: 60px;
-
-}
-.defaultNew{
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  visibility: hidden;
-  padding: 10px;
-}
-
-
-.default{
-  height: 30px;
-  width: 30px;
-  visibility: hidden;
-  padding: 10px;
-}
 .discount h2 + h2 {
   margin: 7px;
 }
 .discount button {
-  background-color: #0db9ee;
-  border-radius: 25px;
+  background-color: #0351fa;
   border: none;
   color: white;
   padding: 10px 16px;
@@ -116,16 +58,16 @@ padding: 0;
   transition: all 0.3s
 }
 .discount button[disabled] {
-background-color: #fcce79;  
-} 
+  background-color: #fcce79;
+}
 .discount button[disabled]:hover {
-background-color: #fcce79;
-color: white;
-cursor: default;
-} 
+  background-color: #fcce79;
+  color: white;
+  cursor: default;
+}
 .discount button:hover {
   cursor: pointer;
-  background-color: #e85636;
+  background-color: #1e0285;
   color: #000
 }
 .prices {
@@ -181,16 +123,16 @@ form input {
   cursor: pointer;
 }
 .to_order {
-  background-color: #f72525; 
+  background-color: #f72525;
 }
 .to_order:hover {
   background-color: #c20606;
 }
 .to_catalog {
-  background-color: #3966fa; 
+  background-color: #3966fa;
 }
 .to_catalog:hover {
-  background-color: #3015c5;
+  background-color: #c515ae;
 }
 .progress_bar_bg{
   background: #fff;
@@ -200,10 +142,13 @@ form input {
   border: 1px solid #000;
 }
 .progress_bar {
-  background: rgb(5, 206, 5);
+  background: rgb(139, 255, 0);
   height: 100%;
   margin: 0;
 }
 .sign_in input {
   display: block
+}
+Link {
+  color: white
 }

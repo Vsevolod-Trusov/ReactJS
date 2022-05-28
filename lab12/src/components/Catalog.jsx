@@ -4,6 +4,7 @@ import { Modal } from "./Modal.jsx";
 import { addToCart } from "../redux/actions";
 import "../index.css";
 import ReactDOM from "react-dom"
+import classnames from "classnames";
 
 class Catalog extends Component {
   constructor(props) {
@@ -13,75 +14,37 @@ class Catalog extends Component {
   }
   array = [
     {
-      id: "Milk",
-      name: "Milk",
-      price: 0.8,
+      name: "Aist Turbo",
+      price: 155,
       inStock: 4,
-      img: "/imgs/milk.jpg",
-      desc: "Малако",
+      img: "/images/Aist Turbo.PNG",
       new: true,
-      discount: 20,
+      discount: 65,
     },
     {
-      id: "Butter",
-      name: "Butter",
-      price: 1.3,
+      name: "Cube Acid 19''",
+      price: 130.50,
       inStock: 13,
-      img: "/imgs/butter.jpg",
-      desc: "Масла",
+      img: "/images/Cube Acid 19''.PNG",
       new: true,
       discount: 10,
     },
     {
-      id: "Coffee",
-      name: "Coffee",
-      price: 12,
+      name: "Krakken Molly",
+      price: 120,
       inStock: 23,
-      img: "/imgs/coffee.jpg",
-      desc: "Кава",
+      img: "/images/Krakken Molly.PNG",
       new: false,
       discount: 40,
     },
     {
-      id: "Tea",
-      name: "Tea",
-      price: 13,
+      name: "Racer Bruno 16''",
+      price: 130,
       inStock: 2,
-      img: "/imgs/tea.jpg",
-      desc: "Гарбата",
+      img: "/images/Racer Bruno 16''.PNG",
       new: false,
       discount: 15,
-    },
-    {
-      id: "Sugar",
-      name: "Sugar",
-      price: 1.2,
-      inStock: 0,
-      img: "/imgs/sugar.jpg",
-      desc: "Цукар",
-      new: false,
-      discount: 30,
-    },
-    {
-      id: "Apples",
-      name: "Apples",
-      price: 1,
-      inStock: 16,
-      img: "/imgs/apples.jpg",
-      desc: "Яблыкi",
-      new: false,
-      discount: 25,
-    },
-    {
-      id: "Cheese",
-      name: "Cheese",
-      price: 10,
-      inStock: 9,
-      img: "/imgs/cheese.jpg",
-      desc: "Сыр",
-      new: false,
-      discount: 5,
-    },
+    }
   ];
   sort(byWhat) {
     let direction = this.sorted[byWhat] ? 1 : -1,
@@ -118,15 +81,33 @@ class Catalog extends Component {
     }
     this.setState({isModalOpen: true});
   }
+
+
   goods() {
-    return this.state.array.map((item) => {
+
+    let imgNewMarckStyle={
+      height:"30px",
+      width:"30px"}
+
+    return this.state.array.map((item,id) => {
       return (
-        <div className="one_good" key={item.id}>
+        <div className="one_good" key={id}>
+          <div
+              className={classnames({
+                'new': item.new,
+                'defaultNew': !item.new,
+              })}><img src='images/new.png' /></div>
           <img src={item.img} alt="" />
           <div className="text">
             <div className="discount">
-              {item.new && <h2>New</h2>}
-              <h2>{item.discount}%</h2>
+
+              <div
+                  className={classnames({
+                    'redDiscount': item.discount>=60,
+                    'yelDiscount': item.discount>=30 && item.discount<60,
+                    'greenDiscount': item.discount<30 && item.discount>0,
+                    'default': item.discount===0,
+                  })}>{item.discount}%</div>
               <button
                 className="cart"
                 onClick={() => this.onClickHandler(item)}
@@ -143,7 +124,6 @@ class Catalog extends Component {
               <h3>{item.price}$</h3>
             </div>
             <h4>Available: {item.inStock} items</h4>
-            <div>{item.desc}</div>
           </div>
         </div>
       );

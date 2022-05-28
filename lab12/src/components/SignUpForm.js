@@ -1,7 +1,6 @@
 import React from "react";
 import { SignUpEmailInput } from "./SignUpEmailInput";
 import { SignUpPasswordInput } from "../SignUpPasswordInput";
-import { PhoneInput } from "./PhoneInput.js";
 import { connect } from "react-redux";
 import { signUp } from "../redux/actions";
 import { SignInForm } from "./SignInForm";
@@ -88,9 +87,6 @@ class SignUpForm extends React.Component {
           {this.month()}
           {this.year()}
         </div>
-        <br />
-        <PhoneInput />
-        <br />
         <button disabled={this.state.disableBtn} onClick={this.handleBtnClick}>
           send
         </button>

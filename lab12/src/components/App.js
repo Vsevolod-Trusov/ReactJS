@@ -5,10 +5,14 @@ import SignUpForm from "./SignUpForm";
 
 function App() {
   return (
-    <> 
-      <Catalog />
-      <SignUpForm />
-    </>
+    <div className="main">
+        <div >
+            <SignUpForm />
+        </div>
+        <div>
+            <Catalog />
+        </div>
+    </div>
   );
 }
 

@@ -20,7 +20,7 @@ export class Modal extends Component {
                     <h3>Goods in cart: {store.getState().goods.length}</h3>
                     <h4>Total: {Math.round(this.total()*100) / 100}$</h4>
                     <button className="to_catalog" onClick={this.props.toCatalog}>Back to Catalog</button>
-                    <button className="to_order">To Order</button> 
+                   {/* <button className="to_order">To Order</button> */}
                 </div>
             </div>
         )

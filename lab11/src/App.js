@@ -5,35 +5,35 @@ function App() {
   const hierarchy = [{
     id: 1,
     name: "folder1",
-    icon: "/icons/folder-solid.svg",
+    icon: "/icons/folder.png",
     childs: [{
       id: 2,
       name: "folder2",
-      icon: "/icons/folder-solid.svg",
+      icon: "/icons/folder.png",
       onClick: function(id) {
         console.log(id);
       },
       childs: [{
-        id: "1",
+        id: 3,
         name: "image.png",
-        icon: "/icons/file-image-solid.svg",
+        icon: "/icons/file-image.png",
         onClick: function(id) {
           console.log(id);
         }
       }]
     }]
   }, {
-    id: 3,
+    id: 4,
     name: "folder3",
-    icon: "/icons/folder-solid.svg",
+    icon: "/icons/folder.png",
     childs: [{
-      id: 4,
+      id: 5,
       name: "folder4",
-      icon: "/icons/folder-solid.svg",
+      icon: "/icons/folder.png",
       childs: [{
-        id: 5,
+        id: 6,
         name: "text.txt",
-        icon: "/icons/file-alt-solid.svg",
+        icon: "/icons/text-box.png",
         onClick: function(id) {
           console.log(id);
         }

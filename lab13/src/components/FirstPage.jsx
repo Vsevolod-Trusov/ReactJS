@@ -5,12 +5,22 @@ import { Link } from "react-router-dom";
 
 class FirstPage extends React.Component {
   state={
-    TooMuch: false
+    TooMuch: false,
+    checkFlag: true
   }
     checkboxOnChange(e, item) {
-        if (e.target.checked)
-        this.props.addToCart(item)
-        else this.props.deleteFromCart(item)
+        if (this.state.checkFlag)
+        {
+            this.setState({checkFlag: false});
+            this.props.deleteFromCart(item)
+            //this.props.addToCart(item)
+
+        }
+        else
+        {
+            this.setState({checkFlag: true});
+
+        }
     }
     inputOnChange(e, item) {
       for (let i = 0; i < this.props.goods.length; i++) {
@@ -46,8 +56,8 @@ class FirstPage extends React.Component {
       return <div key={item.id} className="good_in_cart">
         <h3>Name:{item.name}</h3>
         <h4>Price:{(item.price * (100 - item.discount)) / 100}$</h4>
-        <input type="number" name="numberOfGoods" defaultValue="0" onChange={(e) => this.inputOnChange(e, item)} />
-        <input type="checkbox" name="inCart" checked onChange={(e) => this.checkboxOnChange(e, item)} />
+        <input type="number" name="numberOfGoods" defaultValue="0" disabled={!this.state.checkFlag} onChange={(e) => this.inputOnChange(e, item)} />
+        <input type="checkbox" name="inCart" checked={this.state.checkFlag} onChange={(e) => this.checkboxOnChange(e, item)} />
         <button onClick={(e) => this.props.deleteFromCart(item)}>Delete item</button>
       </div>;
     })}
